@@ -1,0 +1,9 @@
+target remote localhost:1234
+set language asm
+set disassembly-flavor intel
+set disassemble-next-line on
+define asm_next
+nexti
+disassemble
+display/i $pc
+end
