@@ -21,3 +21,15 @@ u16int inw(u16int port) {
     asm volatile ("inw %1, %0 " : "=a" (ret) : "dN" (port));
     return ret;
 }
+// Super simple memcpy, could be faster
+void *memcpy(void *dest, const void *src, u16int count) {
+    
+    void *ret = dest;
+
+    while (count-=4) {
+        *(u8int *)dest = *(u8int *)src;
+        dest = (u8int *)dest + 1;
+        src = (u8int *)src + 1;
+    }
+    return ret;
+}
