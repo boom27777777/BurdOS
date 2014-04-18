@@ -1,5 +1,4 @@
 SOURCES=kernel.o main.o common.o monitor.o
-DIR=src/
 CFLAGS=-nostdlib -nostdinc -fno-builtin -fno-stack-protector -m32 -g
 LDFLAGS=-m elf_i386 -Tlink.ld
 ASFLAGS=-felf

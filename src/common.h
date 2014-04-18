@@ -19,4 +19,8 @@ u16int inw(u16int port);
 
 void *memcpy(void *dest, const void *src, u16int count);
 
+u16int strlen(const char *str);
+
+void *memset(void *str, int val, u16int count);
+
 #endif
